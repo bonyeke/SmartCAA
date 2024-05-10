@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Development Table</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .summary-section {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: flex-start; /* Alinha os itens à esquerda */
+            flex-wrap: wrap;
+        }
+    
+        .summary-item {
+            flex-basis: calc(33.333% - 20px); /* Ajusta a largura para 3 itens por linha, considerando margens/padding */
+            box-sizing: border-box;
+            margin-right: 10px; /* Adiciona margem à direita de cada item, exceto o último */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Alinha o conteúdo dos itens à esquerda */
+        }
+    
+        .summary-item:last-child {
+            margin-right: 0; /* Remove a margem direita do último item para alinhamento perfeito */
+        }
+    
+        .summary-item h2 {
+            background-color: #97d045; /* Cor de fundo */
+            padding: 10px; /* Espaçamento interno para criar o efeito de quadrado */
+            color: white; /* Cor do texto */
+            margin: 0 0 10px 0; /* Margens para separar os títulos dos parágrafos e dos outros títulos */
+            border-radius: 5px; /* Bordas arredondadas */
+            text-align: left; /* Alinha o texto à esquerda */
+            width: 100%; /* Garante que o título ocupe toda a largura do item */
+        }
+    
+        .summary-item p {
+            margin: 0 0 10px 0; /* Margem inferior para separar os parágrafos dos próximos itens */
+            text-align: center; /* Opcional: Centraliza o texto do parágrafo */
+        }
+    
+        select {
+            margin-top: 10px; /* Espaço acima da lista suspensa */
+            width: auto; /* Ajusta a largura da lista suspensa conforme o necessário */
+        }
+    
+        /* Adiciona estilo CSS para os cabeçalhos da tabela */
+        #leadDevelopmentTable th {
+            background-color: #B3B1B1; /* Define a cor de fundo dos cabeçalhos */
+            color: #333; /* Define a cor do texto dos cabeçalhos */
+        }
+    </style>
+</head>
+<body>
+       <!-- Inserção do logo da Valeo alinhado à esquerda -->
+	   <img src="https://www.valeo.com/wp-content/themes/valeo/images/logo.png" alt="Logo da Valeo" style="margin-left: 20px;">
+
+<div class="summary-section">
+    <div class="summary-item">
+        <h2>Project Type</h2>
+        <p id="totalHours">Home / Horas / Custo de pessoal / despesas </p>
+        <select>
+            <option value="P0">P0</option>
+            <option value="P">P1</option>
+            <option value="P2">P2</option>
+            <option value="P3">P3</option>
+            <option value="P10">P10</option>
+            <option value="P21">P21</option>
+        </select>
+    </div>
+    <div class="summary-item">
+        <h2>Main Project MST Driving Capitalization Criteria</h2>
+        <p id="staffCost">.</p>
+        <select>
+            <option value="P0">P0</option>
+            <option value="P1">P1</option>
+            <option value="P2">P2</option>
+            <option value="P3">P3</option>
+            <option value="P10">P10</option>
+            <option value="P21">P21</option>
+        </select>
+    </div>
+    <div class="summary-item">
+        <h2>Project Capitalised</h2>
+        <p id="expenses">.</p>
+        <select>
+            <option value="NO">NO</option>
+            <option value="YES">yes</option>
+            
+        </select>
+		</div>
+	</div>
+	
+
+<table id="leadDevelopmentTable">
+    <thead>
+        <tr>
+            <th>Lead Development (Entity code)</th>
+            <th>HCC/MCC/LCC</th>
+            <th>Hourly rate</th>
+            <th>Functions</th>
+            <th>CLEAN (Project Milestones)</th>
+			<th>2022</th>
+            <th>2023</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Project Manager</td>
+            <td>
+                <select class="categorySelect">
+                    <option value="HCC">HCC</option>
+                    <option value="MCC">MCC</option>
+                    <option value="LCC">LCC</option>
+                </select>
+            </td>
+            <td><input type="number" class="inputHours" value="0"></td>
+            <td class="infoColumn">Project Manager</td>
+            <td><input type="text" class="hourlyRate"></td>
+			<td><input type="number" class="year2022"></td>
+            <td><input type="number" class="year2023"></td>
+        </tr>
+        <tr>
+            <td>MEC-M CAD</td>
+            <td>
+                <select class="categorySelect">
+                    <option value="HCC">HCC</option>
+                    <option value="MCC">MCC</option>
+                    <option value="LCC">LCC</option>
+                </select>
+            </td>
+            <td><input type="number" class="inputHours" value="0"></td>
+            <td class="infoColumn">MEC-M CAD</td>
+            <td><input type="text" class="hourlyRate"></td>
+			<td><input type="number" class="year2022"></td>
+            <td><input type="number" class="year2023"></td>
+        </tr>
+        <tr>
+            <td>MEC-Simulation</td>
+            <td>
+                <select class="categorySelect">
+                    <option value="HCC">HCC</option>
+                    <option value="MCC">MCC</option>
+                    <option value="LCC">LCC</option>
+                </select>
+            </td>
+            <td><input type="number" class="inputHours" value="0"></td>
+            <td class="infoColumn">MEC-Simulation</td>
+            <td><input type="text" class="hourlyRate"></td>
+			<td><input type="number" class="year2022"></td>
+            <td><input type="number" class="year2023"></td>
+        </tr>
+        <tr>
+            <td>PTM Quality</td>
+            <td>
+                <select class="categorySelect">
+                    <option value="HCC">HCC</option>
+                    <option value="MCC">MCC</option>
+                    <option value="LCC">LCC</option>
+                </select>
+            </td>
+            <td><input type="number" class="inputHours" value="0"></td>
+            <td class="infoColumn">PTM Quality</td>
+            <td><input type="text" class="hourlyRate"></td>
+			<td><input type="number" class="year2022"></td>
+            <td><input type="number" class="year2023"></td>
+        </tr>
+        <tr>
+            <td>Product Technical Engineer / Leader / Manager</td>
+            <td>
+                <select class="categorySelect">
+                    <option value="HCC">HCC</option>
+                    <option value="MCC">MCC</option>
+                    <option value="LCC">LCC</option>
+                </select>
+            </td>
+            <td><input type="number" class="inputHours" value="0"></td>
+            <td class="infoColumn">Product Technical Engineer</td>
+            <td><input type="text" class="hourlyRate"></td>
+			<td><input type="number" class="year2022"></td>
+            <td><input type="number" class="year2023"></td>
+        </tr>
+        <tr>
+            <td>PTM Process</td>
+            <td>
+                <select class="categorySelect">
+                    <option value="HCC">HCC</option>
+                    <option value="MCC">MCC</option>
+                    <option value="LCC">LCC</option>
+                </select>
+            </td>
+            <td><input type="number" class="inputHours" value="0"></td>
+            <td class="infoColumn">PTM Process</td>
+            <td><input type="text" class="hourlyRate"></td>
+			<td><input type="number" class="year2022"></td>
+            <td><input type="number" class="year2023"></td>
+        </tr>
+        <tr>
+            <td>PTM Purchasing</td>
+            <td>
+                <select class="categorySelect">
+                    <option value="HCC">HCC</option>
+                    <option value="MCC">MCC</option>
+                    <option value="LCC">LCC</option>
+                </select>
+            </td>
+            <td><input type="number" class="inputHours" value="0"></td>
+            <td class="infoColumn">PTM Purchasing</td>
+            <td><input type="text" class="hourlyRate"></td>
+			<td><input type="number" class="year2022"></td>
+            <td><input type="number" class="year2023"></td>
+        </tr>
+        <tr>
+            <td>PTM Supply Chain</td>
+            <td>
+                <select class="categorySelect">
+                    <option value="HCC">HCC</option>
+                    <option value="MCC">MCC</option>
+                    <option value="LCC">LCC</option>
+                </select>
+            </td>
+            <td><input type="number" class="inputHours" value="0"></td>
+            <td class="infoColumn">PTM Supply Chain</td>
+            <td><input type="text" class="hourlyRate"></td>
+			<td><input type="number" class="year2022"></td>
+            <td><input type="number" class="year2023"></td>
+        </tr>
+        <tr>
+            <td>VAL-General</td>
+            <td>
+                <select class="categorySelect">
+                    <option value="HCC">HCC</option>
+                    <option value="MCC">MCC</option>
+                    <option value="LCC">LCC</option>
+                </select>
+            </td>
+            <td><input type="number" class="inputHours" value="0"></td>
+            <td class="infoColumn">VAL-General</td>
+            <td><input type="text" class="hourlyRate"></td>
+			<td><input type="number" class="year2022"></td>
+            <td><input type="number" class="year2023"></td>
+        </tr>
+        <tr>
+            <td>PTM Quality</td>
+            <td>
+                <select class="categorySelect">
+                    <option value="HCC">HCC</option>
+                    <option value="MCC">MCC</option>
+                    <option value="LCC">LCC</option>
+                </select>
+            </td>
+            <td><input type="number" class="inputHours" value="0"></td>
+            <td class="infoColumn">PTM Quality</td>
+            <td><input type="text" class="hourlyRate"></td>
+			<td><input type="number" class="year2022"></td>
+            <td><input type="number" class="year2023"></td>
+        </tr>
+        <tr>
+            <td>PTM Quality</td>
+            <td>
+                <select class="categorySelect">
+                    <option value="HCC">HCC</option>
+                    <option value="MCC">MCC</option>
+                    <option value="LCC">LCC</option>
+                </select>
+            </td>
+            <td><input type="number" class="inputHours" value="0"></td>
+            <td class="infoColumn">PTM Quality</td>
+            <td><input type="text" class="hourlyRate"></td>
+			<td><input type="number" class="year2022"></td>
+            <td><input type="number" class="year2023"></td>
+        </tr>
+    </tbody>
+</table>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.categorySelect').forEach(function(selectElement) {
+        selectElement.addEventListener('change', function() {
+            console.log('Categoria selecionada:', selectElement.value);
+            // Implemente a lógica necessária para lidar com a mudança de seleção aqui.
+        });
+    });
+
+    document.querySelectorAll('.inputHours').forEach(function(inputElement) {
+        inputElement.addEventListener('input', function() {
+            console.log('Horas atualizadas:', inputElement.value);
+            // Implemente a lógica necessária para lidar com a entrada de horas aqui.
+        });
+    });
+    
+    // Adicione aqui qualquer script adicional necessário para manipular os campos Hourly Rate, se necessário.
+});
+</script>
+
+</body>
+</html>
